@@ -1,0 +1,1418 @@
+Stick to Js = NO. why ?
+Cause - Challenges of implementation.
+	Browser incompatibility issues to be resolved.
+	Not strongly typed. It scales badly.
+
+Js -	Many libraries - JQuery etc. - specific purpose, everywhere, 
+	Some frameworks - Angular, React,
+	All designed for UI development.
+	But eversince, NodeJs came to market, industry has taken Js devs to server / Backend development.
+Disadv- loosely typed, no modularity.. Hence Ts
+
+
+
+NodeJS- saves life and time - Combination of Js nd C++, unix etc.
+	"Node JS is designed for highly concurrent and complex servers."
+	Node JS - 6 is industry standard. Most recent and stable - 8.9 and recentest is 9.2
+
+npm- 	Node Package Manager - libraries and packages, global directory for many of dependencies.
+
+Install node, install npm.
+
+
+Node Js- The server-side Javascript. A platform.
+
+	V8 is an opens source javascript engine, by google. Chrome uses v8 engine for js. by Ryan Dahl in 2009. Latest version is 4.1.0.
+	Paypal - developed system on Node Js.
+	40% js and 60% c++. Compiles Js to native machine code.v8 is extremely fast.
+	Event driven, non blocking. Single Thread - controversial and interesting.
+	Single thread - but highly scalable, No buffering.
+
+	Can develop - HTTP server, DNS server, Static File Transfer, Web chat apps, real time games.
+	
+
+	Single Thread - Synchronous IO.
+	Multiple Thread - Synchronous IO.
+	
+
+	TOmcat blindly creates number of threads for number of connections. (single threaded). irrespective of whether they are blocking or non blocking.
+
+	Comparison of NodeJs and Tomcat. Architecture, event loop, non blocking IO tasks.
+	
+	https://github.com/halleshubham/shackrepo.git
+
+--work--
+
+Your environment has been set up for using Node.js 8.9.1 (x64) and npm.
+
+C:\Users\collabera.INBL01LAPTOP090>node -v
+v8.9.1
+
+C:\Users\collabera.INBL01LAPTOP090>cd C:/
+
+C:\>cd NodeJsTraining
+
+C:\NodeJsTraining>mkdir app1
+
+C:\NodeJsTraining>cd app1
+
+C:\NodeJsTraining\app1>dir
+ Volume in drive C is Windows7_OS
+ Volume Serial Number is A825-E0ED
+
+ Directory of C:\NodeJsTraining\app1
+
+12/04/2017  10:45 AM    <DIR>          .
+12/04/2017  10:45 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  328,658,796,544 bytes free
+
+C:\NodeJsTraining\app1>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (app1) sginteractive
+version: (1.0.0) 1.1.2
+description: All about sginteractive project.
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: Shubham SHACK
+license: (ISC)
+About to write to C:\NodeJsTraining\app1\package.json:
+
+{
+  "name": "sginteractive",
+  "version": "1.1.2",
+  "description": "All about sginteractive project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shubham SHACK",
+  "license": "ISC"
+}
+
+
+Is this ok? (yes) yes
+
+C:\NodeJsTraining\app1>dir
+ Volume in drive C is Windows7_OS
+ Volume Serial Number is A825-E0ED
+
+ Directory of C:\NodeJsTraining\app1
+
+12/04/2017  10:52 AM    <DIR>          .
+12/04/2017  10:52 AM    <DIR>          ..
+12/04/2017  10:52 AM               254 package.json
+               1 File(s)            254 bytes
+               2 Dir(s)  328,658,628,608 bytes free
+
+C:\NodeJsTraining\app1>node hello.js
+Hello dear SHACK !, Node Js
+
+C:\NodeJsTraining\app1>npm start
+
+> sginteractive@1.1.2 start C:\NodeJsTraining\app1
+> node hello.js
+
+Hello dear SHACK !, Node Js
+
+C:\NodeJsTraining\app1>npm start
+
+> sginteractive@1.1.2 start C:\NodeJsTraining\app1
+> node hello.js
+
+Hello dear SHACK !, Node Js
+
+C:\NodeJsTraining\app1>npm start
+
+> sginteractive@1.1.2 start C:\NodeJsTraining\app1
+> node hello.js
+
+Hello dear SHACK !, Ne Js
+
+C:\NodeJsTraining\app1>npm install -g nodemon
+C:\Users\collabera.INBL01LAPTOP090\AppData\Roaming\npm\nodemon -> C:\Users\collabera.INBL01LAPTOP090\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules\nodemon\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ nodemon@1.12.1
+added 276 packages in 620.094s
+
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>npm install jasmin-core underscore --save
+npm ERR! code E404
+npm ERR! 404 Not Found: jasmin-core@latest
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\collabera.INBL01LAPTOP090\AppData\Roaming\npm-cache\_logs\2017-12-04T05_44_40_687Z-debug.log
+
+C:\NodeJsTraining\app1>npm install jasmine-core underscore --save
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN sginteractive@1.1.2 No repository field.
+
++ underscore@1.8.3
++ jasmine-core@2.8.0
+added 2 packages in 2.39s
+
+C:\NodeJsTraining\app1>npm install jasmine-core@2.8.0 underscore@1.8.3 --save
+npm WARN sginteractive@1.1.2 No repository field.
+
++ underscore@1.8.3
++ jasmine-core@2.8.0
+updated 2 packages in 1.894s
+
+C:\NodeJsTraining\app1>npm install jasmine-core@2.8.0 underscore@1.8.3 --save
+npm WARN sginteractive@1.1.2 No repository field.
+
++ jasmine-core@2.8.0
++ underscore@1.8.3
+added 2 packages in 0.73s
+
+C:\NodeJsTraining\app1>npm install jasmine-core@2.8.0 underscore@1.8.3 --save
+npm WARN sginteractive@1.1.2 No repository field.
+
++ jasmine-core@2.8.0
++ underscore@1.8.3
+updated 2 packages in 0.801s
+
+C:\NodeJsTraining\app1>npm install jasmine-core@2.8.0 underscore@1.8.3 --save-exact
+npm WARN sginteractive@1.1.2 No repository field.
+
++ jasmine-core@2.8.0
++ underscore@1.8.3
+updated 2 packages in 0.796s
+
+C:\NodeJsTraining\app1>npm shrinkwrap
+npm notice package-lock.json has been renamed to npm-shrinkwrap.json. npm-shrinkwrap.json will be used for future installations.
+
+C:\NodeJsTraining\app1>npm install body-parser --save
+npm WARN sginteractive@1.1.2 No repository field.
+
++ body-parser@1.18.2
+added 20 packages in 6.613s
+
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>npm install -g npmvet
+C:\Users\collabera.INBL01LAPTOP090\AppData\Roaming\npm\npmvet -> C:\Users\collabera.INBL01LAPTOP090\AppData\Roaming\npm\node_modules\npmvet\dist\index.js
++ npmvet@0.1.4
+added 31 packages in 35.862s
+
+C:\NodeJsTraining\app1>npmvet -r inlinetable
++------------------------------------------------------------------------------+
+¦ Name         ¦ Package Version ¦ Installed Version ¦ Status     ¦ Locked     ¦
+¦--------------+-----------------+-------------------+------------+------------¦
+¦ body-parser  ¦ 1.18.2          ¦ 1.18.2            ¦  Matching  ¦  Unlocked  ¦
+¦--------------+-----------------+-------------------+------------+------------¦
+¦ jasmine-core ¦ 2.8.0           ¦ 2.8.0             ¦  Matching  ¦   Locked   ¦
+¦--------------+-----------------+-------------------+------------+------------¦
+¦ underscore   ¦ 1.8.3           ¦ 1.8.3             ¦  Matching  ¦   Locked   ¦
++------------------------------------------------------------------------------+
+
+
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>
+C:\NodeJsTraining\app1>npm outdated
+
+C:\NodeJsTraining\app1>npm install underscore@1.0.0 --save-exact
+npm ERR! code ETARGET
+npm ERR! notarget No matching version found for underscore@1.0.0
+npm ERR! notarget In most cases you or one of your dependencies are requesting
+npm ERR! notarget a package version that doesn't exist.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\collabera.INBL01LAPTOP090\AppData\Roaming\npm-cache\_logs\2017-12-04T06_35_59_953Z-debug.log
+
+C:\NodeJsTraining\app1>npm install underscore@1.8.0 --save-exact
+npm WARN sginteractive@1.1.2 No repository field.
+
++ underscore@1.8.0
+updated 1 package in 1.819s
+
+C:\NodeJsTraining\app1>npm outdated
+Package     Current  Wanted  Latest  Location
+underscore    1.8.0   1.8.0   1.8.3  sginteractive
+
+C:\NodeJsTraining\app1>npm install jasmine-core@2.8.0 underscore@1.8.3 --save-exact
+npm WARN sginteractive@1.1.2 No repository field.
+
++ underscore@1.8.3
++ jasmine-core@2.8.0
+updated 2 packages in 2.148s
+
+C:\NodeJsTraining\app1>npm outdated
+
+C:\NodeJsTraining\app1>npm shackcalmain.js
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, doctor, edit,
+    explore, get, help, help-search, i, init, install,
+    install-test, it, link, list, ln, login, logout, ls,
+    outdated, owner, pack, ping, prefix, profile, prune,
+    publish, rb, rebuild, repo, restart, root, run, run-script,
+    s, se, search, set, shrinkwrap, star, stars, start, stop, t,
+    team, test, token, tst, un, uninstall, unpublish, unstar,
+    up, update, v, version, view, whoami
+
+npm <command> -h     quick help on <command>
+npm -l           display full usage info
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+
+Specify configs in the ini-formatted file:
+    C:\Users\collabera.INBL01LAPTOP090\.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@5.5.1 C:\Program Files\nodejs\node_modules\npm
+
+C:\NodeJsTraining\app1>node shackcalmain.js
+5
+
+C:\NodeJsTraining\app1>git init
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\NodeJsTraining\app1>git status
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\NodeJsTraining\app1>node
+> var a = 2+3
+undefined
+> a
+5
+>
+(To exit, press ^C again or type .exit)
+>
+
+CMD
+------------------==========------------------
+GIT Bash
+--
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1
+$ git init
+Initialized empty Git repository in C:/NodeJsTraining/app1/.git/
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master                          )
+$ npm set init.author.name "shubham"
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master                          )
+$ npm set init.author.email "halleshubham@gmail.com"
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master                          )
+$ npm set init.author.url http://teamph.in
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master                          )
+$ npm login
+Username: halleshubham
+Password: Comeonn!
+Email: (this IS public) halleshubham@gmail.com
+Logged in as halleshubham on https://registry.npmjs.org/.
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in node_modules/body-parser/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/lib/read.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/lib/types/json.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/lib/types/raw.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/lib/types/text.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/lib/types/urlencoded.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/body-parser/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/bytes/History.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/bytes/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/bytes/Readme.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/bytes/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/bytes/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/content-type/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/content-type/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/content-type/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/content-type/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/content-type/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/.coveralls.yml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/.eslintrc.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/.npmignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/.travis.yml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/CHANGELOG.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/Makefile.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/component.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/karma.conf.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/node.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/src/browser.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/src/debug.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/src/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/src/inspector-log.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/debug/src/node.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/History.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/Readme.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/lib/browser/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/lib/compat/callsite-tostring.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/lib/compat/event-listener-count.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/lib/compat/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/depd/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ee-first/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ee-first/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ee-first/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ee-first/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/http-errors/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/http-errors/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/http-errors/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/http-errors/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/http-errors/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/.npmignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/.travis.yml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/Changelog.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/dbcs-codec.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/dbcs-data.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/internal.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/sbcs-codec.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/sbcs-data-generated.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/sbcs-data.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/tables/big5-added.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/tables/cp936.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/tables/cp949.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/tables/cp950.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/tables/eucjp.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/tables/gbk-added.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/tables/shiftjis.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/utf16.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/encodings/utf7.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/lib/bom-handling.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/lib/extend-node.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/lib/index.d.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/lib/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/lib/streams.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/iconv-lite/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/inherits/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/inherits/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/inherits/inherits.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/inherits/inherits_browser.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/inherits/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/.codeclimate.yml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/.editorconfig.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/.github/CONTRIBUTING.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/.github/ISSUE_TEMPLATE.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/.github/PULL_REQUEST_TEMPLATE.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/.npmignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/CODE_OF_CONDUCT.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/MANIFEST.in.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/MIT.LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/RELEASE.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/bower.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/images/jasmine-horizontal.svg.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/jasmine_core.egg-info/PKG-INFO.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/jasmine_core.egg-info/SOURCES.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/jasmine_core.egg-info/dependency_links.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/jasmine_core.egg-info/requires.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/jasmine_core.egg-info/top_level.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/console/console.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/boot.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/node_example/lib/jasmine_examples/Player.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/node_example/lib/jasmine_examples/Song.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/node_example/spec/helpers/jasmine_examples/SpecHelper.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/node_example/spec/jasmine_examples/PlayerSpec.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/spec/PlayerSpec.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/spec/SpecHelper.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/src/Player.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/example/src/Song.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/jasmine.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/jasmine.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/json2.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/lib/jasmine-core/node_boot.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/jasmine-core/requirements.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/media-typer/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/media-typer/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/media-typer/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/media-typer/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/media-typer/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-db/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-db/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-db/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-db/db.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-db/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-db/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-types/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-types/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-types/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-types/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/mime-types/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ms/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ms/license.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ms/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/ms/readme.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/on-finished/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/on-finished/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/on-finished/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/on-finished/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/on-finished/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/.editorconfig.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/.eslintignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/.eslintrc.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/CHANGELOG.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/dist/qs.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/lib/formats.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/lib/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/lib/parse.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/lib/stringify.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/lib/utils.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/test/.eslintrc.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/test/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/test/parse.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/test/stringify.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/qs/test/utils.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/raw-body/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/raw-body/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/raw-body/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/raw-body/index.d.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/raw-body/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/raw-body/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/setprototypeof/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/setprototypeof/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/setprototypeof/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/setprototypeof/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/statuses/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/statuses/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/statuses/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/statuses/codes.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/statuses/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/statuses/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/type-is/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/type-is/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/type-is/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/type-is/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/type-is/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/underscore/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/underscore/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/underscore/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/underscore/underscore-min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/underscore/underscore.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/unpipe/HISTORY.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/unpipe/LICENSE.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/unpipe/README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/unpipe/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in node_modules/unpipe/package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in npm-shrinkwrap.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory.
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git status
+'On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   hello.js
+        new file:   node_modules/body-parser/HISTORY.md
+        new file:   node_modules/body-parser/LICENSE
+        new file:   node_modules/body-parser/README.md
+        new file:   node_modules/body-parser/index.js
+        new file:   node_modules/body-parser/lib/read.js
+        new file:   node_modules/body-parser/lib/types/json.js
+        new file:   node_modules/body-parser/lib/types/raw.js
+        new file:   node_modules/body-parser/lib/types/text.js
+        new file:   node_modules/body-parser/lib/types/urlencoded.js
+        new file:   node_modules/body-parser/package.json
+        new file:   node_modules/bytes/History.md
+        new file:   node_modules/bytes/LICENSE
+        new file:   node_modules/bytes/Readme.md
+        new file:   node_modules/bytes/index.js
+        new file:   node_modules/bytes/package.json
+        new file:   node_modules/content-type/HISTORY.md
+        new file:   node_modules/content-type/LICENSE
+        new file:   node_modules/content-type/README.md
+        new file:   node_modules/content-type/index.js
+        new file:   node_modules/content-type/package.json
+        new file:   node_modules/debug/.coveralls.yml
+        new file:   node_modules/debug/.eslintrc
+        new file:   node_modules/debug/.npmignore
+        new file:   node_modules/debug/.travis.yml
+        new file:   node_modules/debug/CHANGELOG.md
+        new file:   node_modules/debug/LICENSE
+        new file:   node_modules/debug/Makefile
+        new file:   node_modules/debug/README.md
+        new file:   node_modules/debug/component.json
+        new file:   node_modules/debug/karma.conf.js
+        new file:   node_modules/debug/node.js
+        new file:   node_modules/debug/package.json
+        new file:   node_modules/debug/src/browser.js
+        new file:   node_modules/debug/src/debug.js
+        new file:   node_modules/debug/src/index.js
+        new file:   node_modules/debug/src/inspector-log.js
+        new file:   node_modules/debug/src/node.js
+        new file:   node_modules/depd/History.md
+        new file:   node_modules/depd/LICENSE
+        new file:   node_modules/depd/Readme.md
+        new file:   node_modules/depd/index.js
+        new file:   node_modules/depd/lib/browser/index.js
+        new file:   node_modules/depd/lib/compat/callsite-tostring.js
+        new file:   node_modules/depd/lib/compat/event-listener-count.js
+        new file:   node_modules/depd/lib/compat/index.js
+        new file:   node_modules/depd/package.json
+        new file:   node_modules/ee-first/LICENSE
+        new file:   node_modules/ee-first/README.md
+        new file:   node_modules/ee-first/index.js
+        new file:   node_modules/ee-first/package.json
+        new file:   node_modules/http-errors/HISTORY.md
+        new file:   node_modules/http-errors/LICENSE
+        new file:   node_modules/http-errors/README.md
+        new file:   node_modules/http-errors/index.js
+        new file:   node_modules/http-errors/package.json
+        new file:   node_modules/iconv-lite/.npmignore
+        new file:   node_modules/iconv-lite/.travis.yml
+        new file:   node_modules/iconv-lite/Changelog.md
+        new file:   node_modules/iconv-lite/LICENSE
+        new file:   node_modules/iconv-lite/README.md
+        new file:   node_modules/iconv-lite/encodings/dbcs-codec.js
+        new file:   node_modules/iconv-lite/encodings/dbcs-data.js
+        new file:   node_modules/iconv-lite/encodings/index.js
+        new file:   node_modules/iconv-lite/encodings/internal.js
+        new file:   node_modules/iconv-lite/encodings/sbcs-codec.js
+        new file:   node_modules/iconv-lite/encodings/sbcs-data-generated.js
+        new file:   node_modules/iconv-lite/encodings/sbcs-data.js
+        new file:   node_modules/iconv-lite/encodings/tables/big5-added.json
+        new file:   node_modules/iconv-lite/encodings/tables/cp936.json
+        new file:   node_modules/iconv-lite/encodings/tables/cp949.json
+        new file:   node_modules/iconv-lite/encodings/tables/cp950.json
+        new file:   node_modules/iconv-lite/encodings/tables/eucjp.json
+        new file:   node_modules/iconv-lite/encodings/tables/gb18030-ranges.json
+        new file:   node_modules/iconv-lite/encodings/tables/gbk-added.json
+        new file:   node_modules/iconv-lite/encodings/tables/shiftjis.json
+        new file:   node_modules/iconv-lite/encodings/utf16.js
+        new file:   node_modules/iconv-lite/encodings/utf7.js
+        new file:   node_modules/iconv-lite/lib/bom-handling.js
+        new file:   node_modules/iconv-lite/lib/extend-node.js
+        new file:   node_modules/iconv-lite/lib/index.d.ts
+        new file:   node_modules/iconv-lite/lib/index.js
+        new file:   node_modules/iconv-lite/lib/streams.js
+        new file:   node_modules/iconv-lite/package.json
+        new file:   node_modules/inherits/LICENSE
+        new file:   node_modules/inherits/README.md
+        new file:   node_modules/inherits/inherits.js
+        new file:   node_modules/inherits/inherits_browser.js
+        new file:   node_modules/inherits/package.json
+        new file:   node_modules/jasmine-core/.codeclimate.yml
+        new file:   node_modules/jasmine-core/.editorconfig
+        new file:   node_modules/jasmine-core/.github/CONTRIBUTING.md
+        new file:   node_modules/jasmine-core/.github/ISSUE_TEMPLATE.md
+        new file:   node_modules/jasmine-core/.github/PULL_REQUEST_TEMPLATE.md
+        new file:   node_modules/jasmine-core/.npmignore
+        new file:   node_modules/jasmine-core/CODE_OF_CONDUCT.md
+        new file:   node_modules/jasmine-core/MANIFEST.in
+        new file:   node_modules/jasmine-core/MIT.LICENSE
+        new file:   node_modules/jasmine-core/README.md
+        new file:   node_modules/jasmine-core/RELEASE.md
+        new file:   node_modules/jasmine-core/bower.json
+        new file:   node_modules/jasmine-core/images/jasmine-horizontal.png
+        new file:   node_modules/jasmine-core/images/jasmine-horizontal.svg
+        new file:   node_modules/jasmine-core/images/jasmine_favicon.png
+        new file:   node_modules/jasmine-core/jasmine_core.egg-info/PKG-INFO
+        new file:   node_modules/jasmine-core/jasmine_core.egg-info/SOURCES.txt
+        new file:   node_modules/jasmine-core/jasmine_core.egg-info/dependency_links.txt
+        new file:   node_modules/jasmine-core/jasmine_core.egg-info/requires.txt
+        new file:   node_modules/jasmine-core/jasmine_core.egg-info/top_level.txt
+        new file:   node_modules/jasmine-core/lib/console/console.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/boot.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/node_example/lib/jasmine_examples/Player.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/node_example/lib/jasmine_examples/Song.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/node_example/spec/helpers/jasmine_examples/SpecHelper.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/node_example/spec/jasmine_examples/PlayerSpec.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/spec/PlayerSpec.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/spec/SpecHelper.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/src/Player.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/example/src/Song.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/jasmine.css
+        new file:   node_modules/jasmine-core/lib/jasmine-core/jasmine.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/json2.js
+        new file:   node_modules/jasmine-core/lib/jasmine-core/node_boot.js
+        new file:   node_modules/jasmine-core/package.json
+        new file:   node_modules/jasmine-core/requirements.txt
+        new file:   node_modules/media-typer/HISTORY.md
+        new file:   node_modules/media-typer/LICENSE
+        new file:   node_modules/media-typer/README.md
+        new file:   node_modules/media-typer/index.js
+        new file:   node_modules/media-typer/package.json
+        new file:   node_modules/mime-db/HISTORY.md
+        new file:   node_modules/mime-db/LICENSE
+        new file:   node_modules/mime-db/README.md
+        new file:   node_modules/mime-db/db.json
+        new file:   node_modules/mime-db/index.js
+        new file:   node_modules/mime-db/package.json
+        new file:   node_modules/mime-types/HISTORY.md
+        new file:   node_modules/mime-types/LICENSE
+        new file:   node_modules/mime-types/README.md
+        new file:   node_modules/mime-types/index.js
+        new file:   node_modules/mime-types/package.json
+        new file:   node_modules/ms/index.js
+        new file:   node_modules/ms/license.md
+        new file:   node_modules/ms/package.json
+        new file:   node_modules/ms/readme.md
+        new file:   node_modules/on-finished/HISTORY.md
+        new file:   node_modules/on-finished/LICENSE
+        new file:   node_modules/on-finished/README.md
+        new file:   node_modules/on-finished/index.js
+        new file:   node_modules/on-finished/package.json
+        new file:   node_modules/qs/.editorconfig
+        new file:   node_modules/qs/.eslintignore
+        new file:   node_modules/qs/.eslintrc
+        new file:   node_modules/qs/CHANGELOG.md
+        new file:   node_modules/qs/LICENSE
+        new file:   node_modules/qs/README.md
+        new file:   node_modules/qs/dist/qs.js
+        new file:   node_modules/qs/lib/formats.js
+        new file:   node_modules/qs/lib/index.js
+        new file:   node_modules/qs/lib/parse.js
+        new file:   node_modules/qs/lib/stringify.js
+        new file:   node_modules/qs/lib/utils.js
+        new file:   node_modules/qs/package.json
+        new file:   node_modules/qs/test/.eslintrc
+        new file:   node_modules/qs/test/index.js
+        new file:   node_modules/qs/test/parse.js
+        new file:   node_modules/qs/test/stringify.js
+        new file:   node_modules/qs/test/utils.js
+        new file:   node_modules/raw-body/HISTORY.md
+        new file:   node_modules/raw-body/LICENSE
+        new file:   node_modules/raw-body/README.md
+        new file:   node_modules/raw-body/index.d.ts
+        new file:   node_modules/raw-body/index.js
+        new file:   node_modules/raw-body/package.json
+        new file:   node_modules/setprototypeof/LICENSE
+        new file:   node_modules/setprototypeof/README.md
+        new file:   node_modules/setprototypeof/index.js
+        new file:   node_modules/setprototypeof/package.json
+        new file:   node_modules/statuses/HISTORY.md
+        new file:   node_modules/statuses/LICENSE
+        new file:   node_modules/statuses/README.md
+        new file:   node_modules/statuses/codes.json
+        new file:   node_modules/statuses/index.js
+        new file:   node_modules/statuses/package.json
+        new file:   node_modules/type-is/HISTORY.md
+        new file:   node_modules/type-is/LICENSE
+        new file:   node_modules/type-is/README.md
+        new file:   node_modules/type-is/index.js
+        new file:   node_modules/type-is/package.json
+        new file:   node_modules/underscore/LICENSE
+        new file:   node_modules/underscore/README.md
+        new file:   node_modules/underscore/package.json
+        new file:   node_modules/underscore/underscore-min.js
+        new file:   node_modules/underscore/underscore-min.map
+        new file:   node_modules/underscore/underscore.js
+        new file:   node_modules/unpipe/HISTORY.md
+        new file:   node_modules/unpipe/LICENSE
+        new file:   node_modules/unpipe/README.md
+        new file:   node_modules/unpipe/index.js
+        new file:   node_modules/unpipe/package.json
+        new file:   npm-shrinkwrap.json
+        new file:   package.json
+        new file:   shackcal.js
+        new file:   shackcalmain.js
+
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git reset
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in npm-shrinkwrap.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory.
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   hello.js
+        new file:   npm-shrinkwrap.json
+        new file:   package.json
+        new file:   shackcal.js
+        new file:   shackcalmain.js
+
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git commit -m "Initial Commit."
+[master (root-commit) f15f2ba] Initial Commit.
+ Committer: collabera <collabera@inbl01laptop277.brd.g-c-i.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 6 files changed, 180 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 hello.js
+ create mode 100644 npm-shrinkwrap.json
+ create mode 100644 package.json
+ create mode 100644 shackcal.js
+ create mode 100644 shackcalmain.js
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git config --global user.email "halleshubham@gmail.com"
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git config --global user.name "Shubham SHACK"
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git commit -m "Initial Commit."
+On branch master
+nothing to commit, working tree clean
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git remote add origin https://github.com/halleshubham/shackrepo.git
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git tag v0.0.1
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git push orign master --tags
+fatal: 'orign' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git push origin master --tags
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 2.43 KiB | 622.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+To https://github.com/halleshubham/shackrepo.git
+ * [new branch]      master -> master
+ * [new tag]         v0.0.1 -> v0.0.1
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ npm publish
++ sginteractive@1.1.2
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+INBL01LAPTOP277+collabera@inbl01laptop277 MINGW64 /c/NodeJsTraining/app1 (master)
+$
+
+
+
+
+
+----------------=============------------------
+
+
+Babel - most famous transpiler - Convert typescript/ES6 into javascript.
+
+Typescript is build on top of ES6. Ts is far more better than js. Babel & TypeScript are same kind of transpillers. Industry safe = version 2 and below.
+
+1. back tild ` asd
+asda` (multiple lines in Js.)
+
+2. String interpolation: console.log('Hello ${person.name}! your age is${}')  ==> consolel.log('Hello" + person.name + " "..);
+
+3. Function parameter (default).
+
+4. Expression binding. ${}
+
+5. let a = 2, scope declarations
+
+6. Classes support
+
+Mini Project: Develop Node Js identitity manager
+
+
+
+
+----
+  _hasOutput: [Function: bound ],
+  _setHasOutput: [Function: bound ],
+  recommendCommands: [Function: bound ],
+  getUsageInstance: [Function: bound ],
+  getValidationInstance: [Function: bound ],
+  getCommandInstance: [Function: bound ],
+  terminalWidth: [Function: bound ],
+  argv: [Getter],
+  _parseArgs: [Function: bound parseArgs],
+  _runValidation: [Function: bound runValidation] }
+
+C:\NodeJsTraining\identitymanager>node yargsDemo.js ahelis hjsahf ewui dhs
+{ _: [ 'ahelis', 'hjsahf', 'ewui', 'dhs' ],
+  help: false,
+  version: false,
+  '$0': 'yargsDemo.js' }
+
+C:\NodeJsTraining\identitymanager>node yargsDemo.js hello --name hjsahf ewui dhs
+hello hjsahf
+{ _: [ 'hello', 'ewui', 'dhs' ],
+  help: false,
+  version: false,
+  name: 'hjsahf',
+  '$0': 'yargsDemo.js' }
+
+C:\NodeJsTraining\identitymanager>node yargsDemo.js hello --name
+hello true
+{ _: [ 'hello' ],
+  help: false,
+  version: false,
+  name: true,
+  '$0': 'yargsDemo.js' }
+
+C:\NodeJsTraining\identitymanager>node yargsDemo.js hello --name
+hello true
+{ _: [ 'hello' ],
+  help: false,
+  version: false,
+  name: true,
+  '$0': 'yargsDemo.js' }
+
+C:\NodeJsTraining\identitymanager>node yargsDemo.js hello --name
+hello true
+{ _: [ 'hello' ],
+  help: false,
+  version: false,
+  name: true,
+  '$0': 'yargsDemo.js' }
+
+C:\NodeJsTraining\identitymanager>node yargsDemo.js hello --name
+hello true
+{ _: [ 'hello' ],
+  help: false,
+  version: false,
+  name: true,
+  '$0': 'yargsDemo.js' }
+
+C:\NodeJsTraining\identitymanager>node yargsDemo.js hello
+love
+{ _: [ 'hello' ],
+  help: false,
+  version: false,
+  '$0': 'yargsDemo.js' }
+
+C:\NodeJsTraining\identitymanager>node addUser --help
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module 'C:\NodeJsTraining\identitymanager\addUser'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+
+C:\NodeJsTraining\identitymanager>node addUser help
+module.js:538
+    throw err;
+    ^
+
+Error: Cannot find module 'C:\NodeJsTraining\identitymanager\addUser'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+
+C:\NodeJsTraining\identitymanager>node namecheck addUser help
+namecheck [command]
+
+Commands:
+  namecheck adduser  Greets the user
+
+Options:
+  --version  Show version number                                       [boolean]
+  --help     Show help                                                 [boolean]
+
+
+C:\NodeJsTraining\identitymanager>node namecheck addUser --name shubham --lastname halle
+{ _: [ 'addUser' ],
+  version: false,
+  help: false,
+  name: 'shubham',
+  lastname: 'halle',
+  '$0': 'namecheck' }
+
+C:\NodeJsTraining\identitymanager>node namecheck addUser --name shubham --lastname halle -c love
+{ _: [ 'addUser' ],
+  version: false,
+  help: false,
+  name: 'shubham',
+  lastname: 'halle',
+  c: 'love',
+  '$0': 'namecheck' }
+
+C:\NodeJsTraining\identitymanager>node namecheck addUser --name shubham --lastname halle --country love
+{ _: [ 'addUser' ],
+  version: false,
+  help: false,
+  name: 'shubham',
+  lastname: 'halle',
+  country: 'love',
+  '$0': 'namecheck' }
+
+C:\NodeJsTraining\identitymanager>node namecheck addUser -n shubham -l halle -c love
+{ _: [ 'addUser' ],
+  version: false,
+  help: false,
+  n: 'shubham',
+  l: 'halle',
+  c: 'love',
+  '$0': 'namecheck' }
+
+C:\NodeJsTraining\identitymanager>node namecheck.js addUser -n shubham -l halle -c love
+{ _: [ 'addUser' ],
+  version: false,
+  help: false,
+  n: 'shubham',
+  l: 'halle',
+  c: 'love',
+  '$0': 'namecheck.js' }
+
+C:\NodeJsTraining\identitymanager>
+C:\NodeJsTraining\identitymanager>node appf.js --help
+starting password manager
+appf.js [command]
+
+Commands:
+  appf.js create  Create a new account
+  appf.js get     Get an existing account
+
+Options:
+  --version  Show version number                                       [boolean]
+  --help     Show help                                                 [boolean]
+
+
+C:\NodeJsTraining\identitymanager>node appf.js create --help
+starting password manager
+appf.js create
+
+Create a new account
+
+Options:
+  --version       Show version number                                  [boolean]
+  --name, -n      Account name (eg: Twitter, Facebook)       [string] [required]
+  --username, -u  Account username or email                  [string] [required]
+  --password, -p  Account password                           [string] [required]
+  --help          Show help                                            [boolean]
+
+
+C:\NodeJsTraining\identitymanager>node appf.js create -n Facebook -u shack -p lovlas
+starting password manager
+Account created!
+{ name: 'Facebook', username: 'shack', password: 'lovlas' }
+
+C:\NodeJsTraining\identitymanager>node appf.js create -n Facebook -u shack -p lovlas -d InteractivePlatform -s reactjs
+starting password manager
+Account created!
+{ name: 'Facebook', username: 'shack', password: 'lovlas' }
+
+C:\NodeJsTraining\identitymanager>node appf.js create -n Facebook -u shack -p lovlas -d InteractivePlatform -s reactjs
+starting password manager
+Account created!
+{ name: 'Facebook',
+  username: 'shack',
+  password: 'lovlas',
+  department: 'InteractivePlatform',
+  skills: 'reactjs' }
+
+C:\NodeJsTraining\identitymanager>npm install crypto-js@3.15.0 --save-exact
+npm ERR! code ETARGET
+npm ERR! notarget No matching version found for crypto-js@3.15.0
+npm ERR! notarget In most cases you or one of your dependencies are requesting
+npm ERR! notarget a package version that doesn't exist.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\collabera.INBL01LAPTOP090\AppData\Roaming\npm-cache\_logs\2017-12-04T11_14_20_667Z-debug.log
+
+C:\NodeJsTraining\identitymanager>npm install crypto-js --save-exact
+npm WARN identitymanager@1.0.0 No repository field.
+
++ crypto-js@3.1.9-1
+added 1 package in 3.989s
+
+C:\NodeJsTraining\identitymanager>node encryptDemo.js
+C:\NodeJsTraining\identitymanager\node_modules\crypto-js\aes.js:101
+                    var keyWords = key.words;
+                                       ^
+
+TypeError: Cannot read property 'words' of undefined
+    at Object._doReset (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\aes.js:101:33)
+    at Object.reset (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\cipher-core.js:119:19)
+    at Object.reset (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\cipher-core.js:457:27)
+    at Object.init (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\cipher-core.js:104:19)
+    at Object.subtype.init (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\core.js:86:46)
+    at Object.subtype.init (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\core.js:86:46)
+    at Object.subtype.init (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\core.js:86:46)
+    at Object.create (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\core.js:113:32)
+    at Object.createEncryptor (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\cipher-core.js:63:26)
+    at Object.encrypt (C:\NodeJsTraining\identitymanager\node_modules\crypto-js\cipher-core.js:674:37)
+
+C:\NodeJsTraining\identitymanager>node encryptDemo.js
+Encrypted message is U2FsdGVkX19h3D7KOCuQQyjK5nv6SD/TvY86V9oQWyM63OrdRc7aqqLjtlZq/3Ce
+undefined:1
+7b226e616d65223a225368756268616d222c22616765223a2273616c6f227d
+ ^
+
+SyntaxError: Unexpected token b in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Object.<anonymous> (C:\NodeJsTraining\identitymanager\encryptDemo.js:14:29)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+
+C:\NodeJsTraining\identitymanager>node cryptoApp.js create --help
+starting password manager
+cryptoApp.js create
+
+Create a new account
+
+Options:
+  --version             Show version number                            [boolean]
+  --name, -n            Account name (eg: Twitter, Facebook) [string] [required]
+  --username, -u        Account username or email            [string] [required]
+  --password, -p        Account password                     [string] [required]
+  --masterPassword, -m  Master password                      [string] [required]
+  --help                Show help                                      [boolean]
+
+
+C:\NodeJsTraining\identitymanager>node cryptoApp.js create --name shubham --username shack --password --masterPassword shu123
+starting password manager
+Unable to create account.
+
+C:\NodeJsTraining\identitymanager>node cryptoApp.js create --name shubham --username shack --password --masterPassword shu123
+starting password manager
+Account created!
+{ name: 'shubham', username: 'shack', password: '' }
+
+C:\NodeJsTraining\identitymanager>node cryptoApp.js --help
+starting password manager
+cryptoApp.js [command]
+
+Commands:
+  cryptoApp.js create  Create a new account
+  cryptoApp.js get     Get an existing account
+
+Options:
+  --version  Show version number                                       [boolean]
+  --help     Show help                                                 [boolean]
+
+
+C:\NodeJsTraining\identitymanager>node cryptoApp.js get --help
+starting password manager
+cryptoApp.js get
+
+Get an existing account
+
+Options:
+  --version             Show version number                            [boolean]
+  --name, -n            Account name (eg: Twitter, Facebook) [string] [required]
+  --masterPassword, -m  Master password                      [string] [required]
+  --help                Show help                                      [boolean]
+
+
+C:\NodeJsTraining\identitymanager>node cryptoApp.js get --name shubham --masterPassword shu123
+starting password manager
+Account found!
+{ name: 'shubham', username: 'shack', password: '' }
+
+C:\NodeJsTraining\identitymanager>node cryptoApp.js get --name shubham --masterPassword shu122
+starting password manager
+Unable to fetch account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
